@@ -1,0 +1,77 @@
+*,*::before,*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --color1:#283149;
+    --color2:#404b69;
+    --color3:#da0463;
+    --color4:#dbedf3;
+}
+body{
+    background: var(--color1);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.container{
+    max-width: 90%;
+    margin:0 auto;
+    text-align: center;
+    height: 100vh;
+    position: relative;
+}
+.calculator{
+    background: var(--color4);
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 1.4rem;
+    border-radius: 8px;
+    box-shadow: 0px 0px 32px 2px #000;
+    border:2px outset var(--color2);
+}
+h1{
+    color: var(--color2);
+    font-size: 1.5rem;
+    margin-bottom: .5rem;
+}
+.calc{
+    background: var(--color2);
+    color:var(--color4);
+    text-align: right;
+    padding: .8rem;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    margin-bottom: .5rem;
+}
+.buttons{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap:.3rem;
+   
+}
+button{
+    padding: .5rem;
+    color:var(--color4);
+    background: var(--color1);
+    font-size: 1.1rem;
+    border-style: outset;
+    border-width: 2px;
+    border-color: var(--color2);
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:active{
+    border-style: inset;
+}
+#ac,#ce{
+    background: var(--color3);
+    border-color: #da0463;
+}
+#zero{
+    grid-column: span 2;
+}
+#equals{
+    grid-row:span 2;
+}
